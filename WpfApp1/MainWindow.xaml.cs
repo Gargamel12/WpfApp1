@@ -18,10 +18,12 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow
+    public partial class MainWindow : Window
     {
-        public MainWindow() => InitializeComponent();
-
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
         private void Kruh_0_0_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -29,7 +31,8 @@ namespace WpfApp1
             {
                 Kruh_0_0.Fill = Brushes.Red;
             }
-            else if (Kruh)
+            else if (Kruh_0_0.Fill.ToString() == Brushes.Red.ToString())
+                Kruh_0_0_.Fill = Brushes.Green;
 
             }
         }
